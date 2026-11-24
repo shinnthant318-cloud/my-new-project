@@ -1,0 +1,433 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TravelGo - Explore Myanmar</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">Travel<span>Go</span></a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="menu-btn" id="menuBtn">☰</button>
+
+            <a href="#booking" class="nav-button">Book Now</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="subtitle">DISCOVER MYANMAR</p>
+
+            <h1>Explore Myanmar,<br>
+                Discover New Places.</h1>
+
+            <p>
+                Discover beautiful destinations and create
+                unforgettable memories with TravelGo.
+            </p>
+
+            <a href="#destinations" class="main-button">
+                Explore Now
+            </a>
+        </div>
+    </section>
+
+   
+<!-- DESTINATIONS SECTION -->
+
+<section class="section" id="destinations">
+
+    <div class="section-title">
+        <h2>Popular Destinations</h2>
+        <p>Explore the most beautiful places in the world.</p>
+    </div>
+
+    <!-- Search and Filter -->
+    <div class="destination-controls">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search destinations..."
+        >
+
+        <select id="categoryFilter">
+            <option value="All">All Categories</option>
+            <option value="Beach">Beach</option>
+            <option value="City">City</option>
+            <option value="Culture">Culture</option>
+        </select>
+
+        <select id="priceSort">
+            <option value="default">Sort By Price</option>
+            <option value="low">Price: Low to High</option>
+            <option value="high">Price: High to Low</option>
+        </select>
+
+    </div>
+
+    <!-- Dynamic Destination Cards -->
+    <div class="destination-container" id="destinationContainer">
+    </div>
+
+    <p id="noResults" class="no-results">
+        No destinations found.
+    </p>
+
+</section>
+
+
+    <!-- Packages -->
+    <section class="section packages" id="packages">
+        <div class="section-title">
+            <h2>Travel Packages</h2>
+            <p>Choose your perfect travel experience.</p>
+        </div>
+
+        <div class="package-container">
+            <div class="package-card">
+                <h3>Bagan Adventure</h3>
+                <h2>$350</h2>
+                <p>5 Days / 4 Nights</p>
+                <a href="#booking">Book Package</a>
+            </div>
+
+            <div class="package-card">
+                <h3>Mandalay Explorer</h3>
+                <h2>$500</h2>
+                <p>6 Days / 5 Nights</p>
+                <a href="#booking">Book Package</a>
+            </div>
+
+            <div class="package-card">
+                <h3>Yangon Experience</h3>
+                <h2>$750</h2>
+                <p>7 Days / 6 Nights</p>
+                <a href="#booking">Book Package</a>
+            </div>
+             <div class="package-card">
+                <h3>Taunggyi Adventure</h3>
+                <h2>$330</h2>
+                <p>6 Days / 5 Nights</p>
+                <a href="#booking">Book Package</a>
+            </div>
+
+            <div class="package-card">
+                <h3>Inlay Explorer</h3>
+                <h2>$550</h2>
+                <p>8 Days / 7 Nights</p>
+                <a href="#booking">Book Package</a>
+            </div>
+
+            <div class="package-card">
+                <h3>Pyin Oo Lwin Experience</h3>
+                <h2>$450</h2>
+                <p>6 Days / 5 Nights</p>
+                <a href="#booking">Book Package</a>
+            </div>
+             <div class="package-card">
+                <h3>Kyaukse Adventure</h3>
+                <h2>$450</h2>
+                <p>5 Days / 4 Nights</p>
+                <a href="#booking">Book Package</a>
+            </div>
+
+            <div class="package-card">
+                <h3>Kalaw Explorer</h3>
+                <h2>$500</h2>
+                <p>6 Days / 5 Nights</p>
+                <a href="#booking">Book Package</a>
+            </div>
+
+            <div class="package-card">
+                <h3>Meiktila Experience</h3>
+                <h2>$630</h2>
+                <p>5 Days / 4 Nights</p>
+                <a href="#booking">Book Package</a>
+            </div>
+             <div class="package-card">
+                <h3>Sagaing Adventure</h3>
+                <h2>$300</h2>
+                <p>6 Days / 5 Nights</p>
+                <a href="#booking">Book Package</a>
+            </div>
+
+            <div class="package-card">
+                <h3>Pakokku Explorer</h3>
+                <h2>$650</h2>
+                <p>6 Days / 5 Nights</p>
+                <a href="#booking">Book Package</a>
+            </div>
+
+            <div class="package-card">
+                <h3>Naypyidaw Experience</h3>
+                <h2>$550</h2>
+                <p>4 Days / 3 Nights</p>
+                <a href="#booking">Book Package</a>
+            </div>
+             <div class="package-card">
+                <h3>Lashio Adventure</h3>
+                <h2>$650</h2>
+                <p>5 Days / 4 Nights</p>
+                <a href="#booking">Book Package</a>
+            </div>
+
+            <div class="package-card">
+                <h3>Tachileik Explorer</h3>
+                <h2>$600</h2>
+                <p>6 Days / 5 Nights</p>
+                <a href="#booking">Book Package</a>
+            </div>
+             <div class="package-card">
+                <h3>Bago Adventure</h3>
+                <h2>$350</h2>
+                <p>5 Days / 4 Nights</p>
+                <a href="#booking">Book Package</a>
+            </div>
+
+            <div class="package-card">
+                <h3>Taungoo Explorer</h3>
+                <h2>$550</h2>
+                <p>6 Days / 5 Nights</p>
+                <a href="#booking">Book Package</a>
+            </div>
+
+            <div class="package-card">
+                <h3>Pyay Experience</h3>
+                <h2>$350</h2>
+                <p>5 Days / 4 Nights</p>
+                <a href="#booking">Book Package</a>
+            </div>
+             <div class="package-card">
+                <h3>Mawlamyine Adventure</h3>
+                <h2>$450</h2>
+                <p>5 Days / 4 Nights</p>
+                <a href="#booking">Book Package</a>
+            </div>
+
+            <div class="package-card">
+                <h3>Hpa-An Explorer</h3>
+                <h2>$570</h2>
+                <p>6 Days / 5 Nights</p>
+                <a href="#booking">Book Package</a>
+            </div>
+
+            <div class="package-card">
+                <h3>Kyaikto Experience</h3>
+                <h2>$550</h2>
+                <p>6 Days / 5 Nights</p>
+                <a href="#booking">Book Package</a>
+            </div>
+             <div class="package-card">
+                <h3>Pathein Adventure</h3>
+                <h2>$300</h2>
+                <p>4 Days / 3 Nights</p>
+                <a href="#booking">Book Package</a>
+            </div>
+
+            <div class="package-card">
+                <h3>Chaung Tha Explorer</h3>
+                <h2>$500</h2>
+                <p>6 Days / 5 Nights</p>
+                <a href="#booking">Book Package</a>
+            </div>
+
+            <div class="package-card">
+                <h3>Ngwe Saung Experience</h3>
+                <h2>$550</h2>
+                <p>7 Days / 6 Nights</p>
+                <a href="#booking">Book Package</a>
+            </div>
+             <div class="package-card">
+                <h3>Ngapali Adventure</h3>
+                <h2>$450</h2>
+                <p>5 Days / 4 Nights</p>
+                <a href="#booking">Book Package</a>
+            </div>
+
+            <div class="package-card">
+                <h3>Dawei Explorer</h3>
+                <h2>$500</h2>
+                <p>6 Days / 5 Nights</p>
+                <a href="#booking">Book Package</a>
+            </div>
+
+            <div class="package-card">
+                <h3>Myeik Experience</h3>
+                <h2>$500</h2>
+                <p>6 Days / 5 Nights</p>
+                <a href="#booking">Book Package</a>
+            </div>
+             <div class="package-card">
+                <h3>Kawthaung Adventure</h3>
+                <h2>$450</h2>
+                <p>5 Days / 4 Nights</p>
+                <a href="#booking">Book Package</a>
+            </div>
+
+            <div class="package-card">
+                <h3>Myitkyina Explorer</h3>
+                <h2>$580</h2>
+                <p>5 Days / 4 Nights</p>
+                <a href="#booking">Book Package</a>
+            </div>
+
+            <div class="package-card">
+                <h3>Putao Experience</h3>
+                <h2>$650</h2>
+                <p>7 Days / 6 Nights</p>
+                <a href="#booking">Book Package</a>
+            </div>
+             <div class="package-card">
+                <h3>Hakha Adventure</h3>
+                <h2>$650</h2>
+                <p>5 Days / 4 Nights</p>
+                <a href="#booking">Book Package</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+        <div class="section-title">
+            <h2>About TravelGo</h2>
+            <p>About TravelGo<br>
+
+Your Journey Begins with TravelGo.
+
+TravelGo is an online travel agency platform designed to make travel planning easier, smarter, and more convenient.
+
+Our platform aims to bring different travel services together in one place, helping travelers discover destinations, explore transportation options, and find suitable tour packages for their journeys.
+
+Whether you are planning a relaxing holiday, an exciting adventure, or a business trip, TravelGo aims to make your travel experience simple and enjoyable.<br>
+
+Our Mission<br>
+
+Our mission is to simplify travel planning by providing convenient access to travel information, transportation options, and tour packages through one user-friendly online platform.<br>
+
+ Our Vision<br>
+
+Our vision is to become a trusted online travel platform that connects people with destinations and makes traveling easier and more accessible for everyone.<br>
+
+Our Services<br>
+
+- **Flight Booking** – Explore flight options for domestic and international journeys.
+- **Bus Booking** – Find convenient bus transportation for your trips.
+- **Train Booking** – Discover train routes and travel options.
+- **Ship Booking** – Explore sea transportation and ferry services.
+- **Tour Packages** – Discover travel packages with accommodation, sightseeing, and other travel experiences.
+- **Destination Discovery** – Explore beautiful destinations in Myanmar and around the world.
+
+### Why Choose TravelGo?
+
+- Multiple Transportation Options
+- Easy Travel Planning
+- Destination Discovery
+- Flexible Tour Packages
+- User-Friendly Experience
+- Convenient Travel Information
+
+### Our Commitment
+
+At TravelGo, we aim to make every journey easier to plan and more enjoyable to experience. We continuously strive to improve our platform and provide travelers with a convenient way to explore the world.
+
+**TravelGo – Explore More. Travel Better.**</p>
+        </div>
+    </section>
+
+    <!-- Booking -->
+    <section class="section booking" id="booking">
+        <div class="section-title">
+            <h2>Book Your Trip</h2>
+            <p>Start planning your next adventure.</p>
+        </div>
+
+        <form id="bookingForm">
+            <input type="text" id="customerName"
+                placeholder="Your Name" required>
+
+            <input type="email" id="customerEmail"
+                placeholder="Your Email" required>
+
+                
+
+            <select id="destination" required>
+                <option value="">Select Destination</option>
+                <option value="Bagan">Bagan</option>
+                <option value="Mandalay">Mandalay</option>
+                <option value="Yangon">Yangon</option>
+                <option value="Taunggyi">Taunggyi</option>
+                <option value="Inlay">Inlay Lake</option>
+                <option value="Pyin Oo Lwin">Pyin Oo Lwin</option>
+                <option value="Kyaukse">Kyaukse</option>
+                <option value="Kalaw">Kalaw</option>
+                <option value="Meiktila">Meiktila</option>
+                <option value="Sagaing">Sagaing</option>
+                <option value="Pakokku">Pakokku</option>
+                <option value="Naypyidaw">Naypyidaw</option>
+                <option value="Lashio">Lashio</option>
+                <option value="Tachileik">Tachileik<option>
+                <option value="Bago">Bago</option>
+                <option value="Taungoo">Taungoo</option>
+                <option value="Pyay">Pyay</option>
+                <option value="Mawlamyine">Mawlamyine</option>
+                <option value="Hpa-An">Hpa-An</option>
+                <option value="Kyaikto">Kyaikto</option>
+                <option value="Pathein">Pathein</option>
+                <option value="Chaung Tha">Chaung Tha</option>     
+                <option value="Ngwe Saung">Ngwe Saung</option>
+                <option value="Ngapali">Ngapali</option>
+                <option value="Dawei">Dawei</option>
+                <option value="Myeik">Myeik</option>
+                <option value="Kawthaung">Kawthaung</option>
+                <option value="Myitkyina">Myitkyina</option>
+                <option value="Putao">Putao</option> 
+                <option value="Hakha">Hakha</option>    
+              </select>
+
+            <input type="date" id="travelDate" required>
+
+            <input type="number" id="travelers"
+                placeholder="Number of Travelers" min="1" required>
+
+            <button type="submit">Submit Booking</button>
+        </form>
+
+        <p id="bookingMessage"></p>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+        <div class="section-title">
+            <h2>Contact Us</h2>
+            <p>Let's plan your next journey together.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h2>TravelGo.</h2>
+        <p>© 2026 TravelGo. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

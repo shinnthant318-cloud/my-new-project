@@ -1,0 +1,462 @@
+
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #243b53;
+    background: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+    height: 80px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #102a43;
+}
+
+.logo span {
+    color: #0d9488;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #243b53;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #0d9488;
+}
+
+.nav-button {
+    text-decoration: none;
+    background: #0d9488;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 7px;
+}
+
+.menu-btn {
+    display: none;
+}
+
+/* Hero */
+.hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    padding: 60px 8%;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.55),
+        rgba(0,0,0,0.25)),
+        url("assets/images/hero.jpg") center/cover;
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.subtitle {
+    color: #7ee0d2;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.hero-content p {
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.main-button {
+    display: inline-block;
+    background: #0d9488;
+    color: white;
+    text-decoration: none;
+    padding: 14px 25px;
+    border-radius: 7px;
+}
+
+/* Sections */
+.section {
+    padding: 80px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.section-title p {
+    color: #627d98;
+}
+
+/* Destinations */
+.destination-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.destination-card {
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.destination-card:hover {
+    transform: translateY(-8px);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 22px;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color: #627d98;
+    margin-bottom: 12px;
+}
+
+.card-content span {
+    color: #0d9488;
+    font-weight: bold;
+}
+
+/* Packages */
+.packages {
+    background: #f5f8fa;
+}
+
+.package-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.package-card {
+    background: white;
+    padding: 35px 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+
+.package-card h2 {
+    color: #0d9488;
+    font-size: 35px;
+    margin: 20px 0;
+}
+
+.package-card p {
+    margin-bottom: 25px;
+}
+
+.package-card a {
+    display: inline-block;
+    background: #0d9488;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+/* Booking */
+.booking {
+    background: #f5f8fa;
+}
+
+#bookingForm {
+    max-width: 600px;
+    margin: auto;
+    display: grid;
+    gap: 15px;
+}
+
+#bookingForm input,
+#bookingForm select {
+    padding: 15px;
+    border: 1px solid #dce5eb;
+    border-radius: 7px;
+    font-size: 15px;
+}
+
+#bookingForm button {
+    padding: 15px;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    background: #0d9488;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    padding: 35px;
+    text-align: center;
+    background: #102a43;
+    color: white;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .destination-container,
+    .package-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .menu-btn {
+        display: block;
+        border: none;
+        background: none;
+        font-size: 25px;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        padding: 25px;
+        background: white;
+        flex-direction: column;
+        z-index: 100;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .destination-container,
+    .package-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 60px 5%;
+    }
+}
+
+/* DESTINATION CONTROLS */
+
+.destination-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 35px;
+    flex-wrap: wrap;
+}
+
+.destination-controls input,
+.destination-controls select {
+    padding: 13px 16px;
+    border: 1px solid #dce5eb;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    background: white;
+    min-width: 180px;
+}
+
+.destination-controls input:focus,
+.destination-controls select:focus {
+    border-color: #0d9488;
+}
+
+/* DESTINATION CARDS */
+
+.destination-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.destination-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 22px;
+}
+
+.category {
+    display: inline-block;
+    background: #e4f7f4;
+    color: #0d9488;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.card-content h3 {
+    margin-bottom: 10px;
+    color: #102a43;
+}
+
+.card-content p {
+    color: #627d98;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-bottom span {
+    color: #0d9488;
+    font-weight: bold;
+}
+
+.view-btn {
+    border: none;
+    background: #0d9488;
+    color: white;
+    padding: 10px 13px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.view-btn:hover {
+    background: #08786f;
+}
+
+.no-results {
+    display: none;
+    text-align: center;
+    color: #627d98;
+    padding: 30px;
+}
+
+@media (max-width: 600px) {
+
+    .destination-controls {
+        flex-direction: column;
+    }
+
+    .destination-controls input,
+    .destination-controls select {
+        width: 100%;
+    }
+
+    .card-bottom {
+        flex-wrap: wrap;
+    }
+
+}
+/* Travel Booking Form */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #102a43;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #dce5eb;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #0d9488;
+}
+#about p{
+    text-align: justify;
+    line-height: 50px;
+}
